@@ -1,0 +1,787 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#faf8f8;
+    color:#444;
+    overflow-x:hidden;
+}
+
+/* ================= PORTADA ================= */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    background:url("foto3.jfif") center top/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px 20px;
+}
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:750px;
+    color:white;
+}
+
+/* TITULO */
+
+.nombre-box{
+    display:inline-block;
+    font-family:'Great Vibes';
+    font-size:clamp(3rem,8vw,5rem);
+    color:white;
+    margin-bottom:15px;
+    text-shadow:0 3px 15px rgba(0,0,0,.4);
+}
+
+/* NOMBRE */
+
+.nombre{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.8rem,4vw,3rem);
+    font-weight:600;
+    margin-bottom:10px;
+    text-shadow:0 2px 10px rgba(0,0,0,.4);
+}
+
+/* FECHA */
+
+.fecha{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.3rem;
+    letter-spacing:3px;
+    margin-bottom:35px;
+    text-shadow:0 2px 10px rgba(0,0,0,.4);
+}
+
+/* ================= CONTADOR ================= */
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.time-box{
+    width:85px;
+    height:85px;
+    border-radius:18px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(4px);
+    border:1px solid rgba(255,255,255,.25);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+.time-box span{
+    font-size:1.8rem;
+    font-weight:700;
+    line-height:1;
+}
+
+.time-box small{
+    margin-top:5px;
+    font-size:.8rem;
+}
+
+/* ================= ONDA ================= */
+
+.wave{
+    height:80px;
+    background:white;
+    border-radius:50% 50% 0 0;
+    margin-top:-40px;
+    position:relative;
+    z-index:5;
+}
+
+/* ================= MUSICA ================= */
+
+.music-section{
+    background:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.music-btn{
+    width:100%;
+    max-width:400px;
+    padding:18px 30px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#555;
+    font-size:18px;
+    font-weight:500;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(0,0,0,.10);
+    transition:.3s;
+}
+
+.music-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+/* ================= MENSAJE ================= */
+
+.mensaje{
+    background:white;
+    padding:80px 8%;
+    text-align:center;
+}
+
+.mensaje h2{
+    font-family:'Great Vibes',cursive;
+    font-size:4rem;
+    color:#c89b9b;
+    margin-bottom:25px;
+}
+
+.mensaje p{
+    max-width:850px;
+    margin:auto;
+    line-height:2;
+    font-size:1.15rem;
+    color:#555;
+}
+
+/* ================= FOTOS ================= */
+
+.foto-grande{
+    background:white;
+    padding:15px 20px;
+}
+
+.foto-grande img{
+    width:100%;
+    max-width:650px;
+    display:block;
+    margin:auto;
+    border-radius:25px;
+    object-fit:cover;
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+    transition:.4s;
+}
+
+.foto-grande img:hover{
+    transform:scale(1.02);
+}
+
+/* ================= CONFIRMACION ================= */
+
+.confirmacion{
+    padding:90px 8%;
+    text-align:center;
+    background:#f2e7e7;
+}
+
+.confirmacion h2{
+    font-family:'Great Vibes',cursive;
+    font-size:4rem;
+    color:#b88a8a;
+    margin-bottom:15px;
+}
+
+.confirmacion p{
+    font-size:1.1rem;
+    margin-bottom:30px;
+}
+
+.btn-whatsapp{
+    display:inline-block;
+    padding:18px 45px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:600;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.btn-whatsapp:hover{
+    transform:translateY(-3px);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:white;
+    color:#777;
+}
+
+/* ================= BOTON SUBIR ================= */
+
+.top-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:55px;
+    height:55px;
+    background:#d6a7a7;
+    color:white;
+    text-decoration:none;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+    z-index:999;
+}
+
+/* ================= ANIMACION ================= */
+
+.hero-content{
+    animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .hero{
+        min-height:90vh;
+        background-position:center center;
+    }
+
+    .nombre-box{
+        font-size:3rem;
+    }
+
+    .nombre{
+        font-size:1.8rem;
+    }
+
+    .fecha{
+        font-size:1rem;
+        letter-spacing:2px;
+    }
+
+    .countdown{
+        gap:8px;
+    }
+
+    .time-box{
+        width:70px;
+        height:70px;
+    }
+
+    .time-box span{
+        font-size:1.3rem;
+    }
+
+    .time-box small{
+        font-size:.7rem;
+    }
+
+    .mensaje h2,
+    .confirmacion h2{
+        font-size:3rem;
+    }
+
+    .mensaje p{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    .foto-grande img{
+        max-width:100%;
+        border-radius:20px;
+    }
+
+    .music-btn{
+        font-size:16px;
+    }
+}
+/* ================= DETALLES DEL EVENTO ================= */
+
+.datos-evento{
+    padding:90px 8%;
+    background:#fff;
+    text-align:center;
+}
+
+.datos-evento h2{
+    font-family:'Great Vibes',cursive;
+    font-size:4rem;
+    color:#c79c9c;
+    margin-bottom:50px;
+}
+
+.evento-cards{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.evento-card{
+    width:280px;
+    background:white;
+    padding:35px 25px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.evento-card:hover{
+    transform:translateY(-8px);
+}
+
+.icono{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.evento-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    color:#555;
+    margin-bottom:10px;
+}
+
+.evento-card p{
+    font-size:1rem;
+    color:#777;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .datos-evento h2{
+        font-size:3rem;
+    }
+
+    .evento-card{
+        width:100%;
+        max-width:320px;
+    }
+
+}
+/* ==========================================
+   MEJORAS PREMIUM RESPONSIVE
+========================================== */
+
+/* FECHA MÁS GRANDE */
+
+.fecha{
+    font-size:clamp(1.4rem, 3vw, 2rem) !important;
+    font-weight:600;
+    letter-spacing:4px;
+}
+
+/* SUBTITULO */
+
+.subtitulo{
+    font-size:clamp(1rem, 2vw, 1.3rem);
+    margin-bottom:15px;
+    color:white;
+    text-shadow:0 2px 8px rgba(0,0,0,.4);
+}
+
+/* DECORACION */
+
+.decoracion{
+    font-size:1.5rem;
+    margin-bottom:25px;
+    animation:flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0);}
+}
+
+/* HERO MÁS RESPONSIVE */
+
+.hero-content{
+    width:100%;
+    max-width:850px;
+}
+
+/* FOTOS MÁS BONITAS */
+
+.foto-grande{
+    padding:25px;
+}
+
+.foto-grande img{
+    width:100%;
+    max-width:800px;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border-radius:30px;
+}
+
+/* GALERIA */
+
+.galeria{
+    padding:80px 6%;
+    background:white;
+    text-align:center;
+}
+
+.galeria h2{
+    font-family:'Great Vibes',cursive;
+    font-size:4rem;
+    color:#c79c9c;
+    margin-bottom:40px;
+}
+
+.galeria-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    max-width:900px;
+    margin:auto;
+}
+
+.galeria-grid img{
+    width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    object-fit:contain;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    transition:.4s;
+}
+
+.galeria-grid img:hover{
+    transform:translateY(-8px) scale(1.03);
+}
+
+/* AGRADECIMIENTO */
+
+.agradecimiento{
+    padding:80px 8%;
+    text-align:center;
+    background:white;
+}
+
+.agradecimiento h2{
+    font-family:'Great Vibes',cursive;
+    font-size:4rem;
+    color:#c79c9c;
+    margin-bottom:20px;
+}
+
+.agradecimiento p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.15rem;
+    line-height:2;
+}
+
+/* TARJETAS EVENTO */
+
+.evento-card{
+    animation:subir 1s ease;
+}
+
+@keyframes subir{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* BOTÓN WHATSAPP */
+
+.btn-whatsapp{
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow:0 0 0 0 rgba(37,211,102,.4);
+    }
+
+    70%{
+        box-shadow:0 0 0 15px rgba(37,211,102,0);
+    }
+
+    100%{
+        box-shadow:0 0 0 0 rgba(37,211,102,0);
+    }
+}
+
+/* TABLET */
+
+@media (min-width:769px) and (max-width:1024px){
+
+    .nombre-box{
+        font-size:4rem;
+    }
+
+    .nombre{
+        font-size:2.4rem;
+    }
+
+    .fecha{
+        font-size:1.6rem !important;
+    }
+
+    .time-box{
+        width:85px;
+        height:85px;
+    }
+
+    .galeria-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* CELULAR */
+
+@media(max-width:768px){
+
+    .hero{
+        min-height:100vh;
+    }
+
+    .nombre-box{
+        font-size:3.2rem;
+    }
+
+    .nombre{
+        font-size:2rem;
+    }
+
+    .fecha{
+        font-size:1.3rem !important;
+    }
+
+    .countdown{
+        gap:10px;
+    }
+
+    .time-box{
+        width:72px;
+        height:72px;
+    }
+
+    .time-box span{
+        font-size:1.4rem;
+    }
+
+    .galeria h2,
+    .mensaje h2,
+    .confirmacion h2,
+    .agradecimiento h2,
+    .datos-evento h2{
+        font-size:3rem;
+    }
+
+    .galeria-grid{
+        grid-template-columns:1fr;
+    }
+
+    .galeria-grid img{
+        height:350px;
+    }
+
+}
+
+/* LAPTOP Y PANTALLAS GRANDES */
+
+@media(min-width:1200px){
+
+    .nombre-box{
+        font-size:5rem;
+    }
+
+    .nombre{
+        font-size:3rem;
+    }
+
+    .fecha{
+        font-size:2rem !important;
+    }
+
+    .hero-content{
+        max-width:1000px;
+    }
+
+}
+/* ===================================
+   ESTILO PREMIUM PORTADA
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
+
+/* TITULO PRINCIPAL */
+
+.nombre-box{
+    font-family:'Cinzel', serif !important;
+    font-size:clamp(2.5rem,7vw,5rem) !important;
+    font-weight:600;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:white;
+    margin-bottom:20px;
+    text-shadow:0 4px 20px rgba(0,0,0,.45);
+}
+
+/* NOMBRE */
+
+.nombre{
+    font-family:'Cormorant Garamond', serif !important;
+    font-size:clamp(2rem,5vw,3.8rem) !important;
+    font-weight:600;
+    color:white;
+    margin-bottom:15px;
+    text-shadow:0 4px 15px rgba(0,0,0,.45);
+}
+
+/* FRASE */
+
+.subtitulo{
+    font-family:'Cormorant Garamond', serif !important;
+    font-size:clamp(1.2rem,2vw,1.7rem) !important;
+    font-style:italic;
+    color:white;
+    margin-bottom:15px;
+    text-shadow:0 2px 8px rgba(0,0,0,.4);
+}
+
+/* FECHA */
+
+.fecha{
+    font-family:'Cinzel', serif !important;
+    font-size:clamp(1.4rem,3vw,2.2rem) !important;
+    font-weight:500;
+    letter-spacing:3px;
+    color:white;
+    margin-bottom:40px;
+    text-shadow:0 3px 12px rgba(0,0,0,.5);
+}
+
+/* CONTADOR MÁS ELEGANTE */
+
+.time-box{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.25);
+    backdrop-filter:blur(6px);
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.time-box span{
+    font-size:2rem;
+    font-family:'Cinzel', serif;
+}
+
+/* ANIMACIÓN SUAVE */
+
+.nombre-box,
+.nombre,
+.subtitulo,
+.fecha,
+.countdown{
+    animation:aparecer 1.5s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* CELULARES */
+
+@media(max-width:768px){
+
+    .nombre-box{
+        font-size:2.2rem !important;
+        letter-spacing:2px;
+    }
+
+    .nombre{
+        font-size:2rem !important;
+    }
+
+    .subtitulo{
+        font-size:1.1rem !important;
+        padding:0 10px;
+    }
+
+    .fecha{
+        font-size:1.2rem !important;
+        letter-spacing:1px;
+    }
+
+}
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.45)
+    );
+}
+.lugar-card{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.lugar-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+}
+.fecha-card{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.fecha-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+}
